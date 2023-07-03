@@ -1,13 +1,14 @@
-const getRandomElement = (array: string[]): string | undefined => {
-  const filteredArray = array.filter((x) => x !== "");
-  const maxElement = filteredArray.length;
+const getRandomElement = (array: string[]): string => {
+  if (array.length === 0) {
+    console.log("Brak elementów");
+    return "";
+  }
 
-  if (maxElement === 0) return;
-
-  return array[Math.floor(Math.random() * maxElement)];
+  const result = array[Math.floor(Math.random() * array.length)];
+  return result;
 };
 
-const exampleArray = ["", ""];
+const exampleArray = ["raz"];
 const result1 = getRandomElement(exampleArray);
 const result2 = getRandomElement(exampleArray);
 

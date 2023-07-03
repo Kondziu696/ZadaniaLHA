@@ -1,11 +1,11 @@
-const getSkippedSentence = (sentence: string, skip: number) => {
+const getSkippedSentence = (sentence: string, skip: number): string => {
   if (sentence.length === 0) {
     console.log("Argument 'sentence' jest pusty.");
-    return undefined;
+    return "";
   }
   if (sentence.length <= skip) {
     console.log("Argument 'sentence' jest zbyt krótki.");
-    return undefined;
+    return "";
   }
 
   let newString = "";
